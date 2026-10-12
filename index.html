@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find a weeknight meal using the ingredients you have.">
+  <title>Pantry & Plate — Recipe Finder</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="recipes.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <nav><a class="brand" href="#top" aria-label="Pantry and Plate home">P<span>·</span>P</a><span class="nav-note">A little inspiration for dinner</span></nav>
+    <div class="hero-copy" id="top"><p class="eyebrow">GOOD FOOD, LESS GUESSWORK</p><h1>Find your next<br><em>favorite meal.</em></h1><p>Search what’s in your kitchen. We’ll find something lovely to make.</p></div>
+    <div class="hero-art" aria-hidden="true"><span>🥑</span><span>🍋</span><span>🍅</span></div>
+  </header>
+  <main>
+    <section class="search-panel" aria-label="Find recipes">
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search a dish or ingredient…" autocomplete="off"><kbd>/</kbd></label>
+      <div class="filter-row"><label class="filter-label" for="category">SHOW ME</label><select id="category"><option value="all">All meals</option><option value="Breakfast">Breakfast</option><option value="Lunch">Lunch</option><option value="Dinner">Dinner</option><option value="Snack">Snack</option></select><span class="filter-divider"></span><label class="check"><input type="checkbox" value="vegetarian"> Vegetarian</label><label class="check"><input type="checkbox" value="vegan"> Vegan</label><label class="check"><input type="checkbox" value="glutenFree"> Gluten-free</label></div>
+    </section>
+    <section class="results-section"><div class="section-heading"><div><p class="eyebrow">THE RECIPE BOX</p><h2>Made for your table</h2></div><p id="result-count" aria-live="polite"></p></div><div id="recipe-list" class="recipe-grid"></div><p id="empty-state" class="empty-state" hidden>No recipes found. Try another ingredient or remove a filter.</p></section>
+  </main>
+  <footer><span>Pantry & Plate</span><span>Simple ingredients. Good company.</span></footer>
+</body>
+</html>
